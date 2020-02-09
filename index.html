@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Mediavine CSS</title>
+<link href="./global.css" rel="stylesheet" type="text/css">
+<style>
+:root {
+	--background: rgba(255,255,255,1);
+	--color: #45a4a8;
+	--logo-margin: 1.813em;
+}
+html, body {
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0 3rem;
+    font-size: 36px;
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.resizable {
+    font-size: 16px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width:766px;
+    height: 501px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.branding {
+    display: flex;
+}
+
+/* leaf */
+.branding:after {
+    content: "";
+    width: 107px;
+    height: 100px;
+    border: 33px solid var(--color);
+    border-radius: 115px 0px;
+    transform: rotate(-20deg);
+    margin-left: calc(var(--logo-margin) + .5em);
+    margin-top: calc(var(--logo-margin) - .25em);
+    box-shadow: 0px 0x 0px 3px var(--color);
+}
+
+.m:before,
+.m > div,
+.m:after {
+    display: inline-block;
+    height: 501px;
+    width: 166px;
+    background-color: var(--color);
+    border-top-right-radius: 166px;
+    border-bottom-left-radius: 166px;
+    content: "";
+}
+.m:before {
+    margin-right: var(--logo-margin);
+}
+.m:after {
+    margin-left: var(--logo-margin);
+}
+
+
+</style>
+</head>
+<body>
+<nav role="navigation">
+	<div class="menu-toggle-wrapper">
+  		<div class="menu-toggle"><span>Menu</span></div>
+	</div>
+	<ul class="menu">
+		<li><a href="./index.html"><span>Home</span></a></li>
+		<li><a href="./logo.html"><span>CSS Logo</span></a></li>
+		<li><a href="./quote.html"><span>CSS Quote</span></a></li>
+  	</ul>
+</nav>
+<p class="title">Portfolio</p>
+<div class="resizable">
+	<div class="branding">
+		<div class="m"><div></div></div>
+	</div>
+</div>
+<script src="./global.js"></script>
+</body>
