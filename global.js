@@ -14,13 +14,15 @@
 	toggle.addEventListener( 'click', toggleMenu, false );
 
 	var $el = document.querySelector( '.resizable' );
-	var elHeight = $el.clientHeight;
+	var $main = document.getElementById( 'main' );
+	
+	var elHeight = $el.offsetHeight;
 	var elWidth = $el.offsetWidth;
 
 	function adjustWindowSize() {
 		scale = Math.min(
-			document.body.offsetWidth / elWidth,    
-			document.body.clientHeight / elHeight
+			parseFloat( getComputedStyle( $main, null ).width.replace( 'px', '' ) ) / elWidth,    
+			parseFloat( getComputedStyle( $main, null ).height.replace( 'px', '' ) )  / elHeight
 		);
 
 		scale = scale > 1 ? 1 : scale;

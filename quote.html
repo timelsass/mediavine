@@ -17,7 +17,7 @@ html, body {
     height: 100%;
     position: relative;
     margin: 0;
-    padding: 0 3rem;
+    padding: 0;
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     background-color: var(--background);
@@ -265,27 +265,37 @@ cite:after {
 </style>
 </head>
 <body>
-<nav role="navigation">
-	<div class="menu-toggle-wrapper">
-  		<div class="menu-toggle"><span>Menu</span></div>
-	</div>
-	<ul class="menu">
-		<li><a href="./index"><span>Home</span></a></li>
-		<li><a href="./logo"><span>CSS Logo</span></a></li>
-		<li><a href="#"><span>CSS Quote</span></a></li>
-  	</ul>
-</nav>
-<p class="title">CSS Quote</p>
-<div class="resizable">
-<div id="content" class="wrapper">
-<blockquote class="wp-block-quote is-style-mediavine">
-	<p>I&#8217;m in love with mediavine and the much higher ad revenue they bring in than my old traditional advertisers did.</p>
-	<cite>Lance Cothern ⋅ Money Manifesto</cite>
-</blockquote>
-</div>
-</div>
-<script src="./global.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+        <nav role="navigation">
+            <div class="menu-toggle-wrapper">
+                  <div class="menu-toggle"><span>Menu</span></div>
+            </div>
+            <ul class="menu">
+                <li><a href="https://timelsass.github.io/mediavine/"><span>Home</span></a></li>
+                <li><a href="https://timelsass.github.io/mediavine/logo"><span>CSS Logo</span></a></li>
+                <li><a href="https://timelsass.github.io/mediavine/quote"><span>CSS Quote</span></a></li>
+              </ul>
+        </nav>
+    </header>
+    <main id="main" role="main">
+        <article>
+            <header>
+                <h1 class="title">CSS Quote</h1>
+            </header>
+            <section class="resizable">
+                <div id="content" class="wrapper">
+                    <blockquote class="wp-block-quote is-style-mediavine">
+                        <p>I&#8217;m in love with mediavine and the much higher ad revenue they bring in than my old traditional advertisers did.</p>
+                        <cite>Lance Cothern ⋅ Money Manifesto</cite>
+                    </blockquote>
+                </div>
+            </section>
+        </article>
+    </main>
+    <script src="./global.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 <script>
 ( function() {
     function ready( fn ) {
