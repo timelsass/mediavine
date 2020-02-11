@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<title>Random Card</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" content="A demonstration of design aided by programming.">
+<link href="./global.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --background: rgba(255,255,255,1);
+    --color: #45a4a8;
+    --logo-margin: 1.813em;
+    --color-1: white;
+    --color-2: #45a4a8;
+    --color-3: #222222;
+    --color-4: #E8E8E8;
+    --color-5: #4CB493;
+}
+
+body {
+    background-color: var(--color-4);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    overflow: hidden;
+}
+
+.resizable {
+    font-size: 16px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width:766px;
+    height: 501px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile-card {
+    background-color: var(--color-3);
+    margin-bottom: 20px;
+}
+		
+.profile-pic {
+    border-radius: 50%;
+    border: 7px solid var(--color-3);
+    position: absolute;
+    top: -65px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    max-width: 100px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+	
+.profile-info {
+		color: var(--color-5);
+		padding: 25px;
+	  position: relative;
+	  margin-top: 15px;
+}
+.profile-info h2 {
+	  color: var(--color-1);
+    letter-spacing: 4px;
+    padding: 12px 0;
+    margin-bottom: 9px;
+}
+.profile-info span {
+	  display: block;
+    font-size: 12px;
+    color: var(--color-4);
+	  letter-spacing: 2px;
+}
+.profile-info a {
+	  color: var(--color-5);
+}
+.profile-info i {
+	  padding: 15px 35px 0px 35px;
+}
+.profile-info div {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    padding: 0 .75em;
+    margin-bottom: 9px;
+}
+.profile-card:hover .profile-pic {
+	  transform: scale(1.1);
+}
+
+.profile-card:hover .profile-info hr  {
+  	opacity: 1;
+}
+		
+.text-center {
+    text-align: center;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    -webkit-filter: url("#msduotone");
+    filter: url('#msduotone');
+}
+		
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 52%;
+  right: 52%;
+  bottom: 0;
+  background: #FFFFFF;
+  border-radius: 50%;
+  height: 3px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.profile-card:hover .hvr-underline-from-center:before, .profile-card:focus .hvr-underline-from-center:before, .profile-card:active .hvr-underline-from-center:before {
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #CECECE;
+  border-radius: 0;
+}
+.col {
+  visibility: hidden;
+  max-width: 400px;
+}
+
+</style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+        <nav role="navigation">
+            <div class="menu-toggle-wrapper">
+                <div class="menu-toggle"><span>Menu</span></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#"><span>Home</span></a></li>
+                <li><a href="./logo"><span>CSS Logo</span></a></li>
+                <li><a href="./quote"><span>CSS Quote</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" role="main">
+        <article>
+            <header>
+                <h1 class="title">Portfolio</h1>
+            </header>
+            <section class="resizable">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="col">
+                      <div class="profile-card text-center">
+                        <img class="img-responsive" src="https://source.unsplash.com/random/400x200">
+                        <div class="profile-info">
+                          <img class="profile-pic" src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg">
+                          <h2 class="hvr-underline-from-center">Tim<span>Developer</span></h2>
+                          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                          <a href="#"><i class="fa fa-envelope-o"></i></a>
+                          <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+            </section>
+        </article>
+    </main>
+    <script src="./global.js"></script>
+    <script>
+        var MVDESIGN = {
+          jobs: [
+              'Multimedia Production Assistant',
+              'Digital / Design Consultant',
+              'Developer',
+              'Web Designer',
+              'System Administrator',
+              'Computer Nerd',
+              'Human Resources',
+              'Publisher',
+              'Marketing Manager',
+              'CEO',
+              'Executive',
+              'Writer',
+              'Editor',
+              'Corporate Counsel',
+              'Wireless Internet Installer',
+              'Ordnance Engineer',
+              'Artist',
+              'Blogger',
+              'Technician'
+          ],
+          hexValueSanitize: function(color) {
+              return color.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i
+              ,(m, r, g, b) => r + r + g + g + b + b).replace('#', '');
+          },
+
+          hexToDec: function(hex) {
+              return parseInt((hex + '').replace(/[^a-f0-9]/gi, ''), 16);
+          },
+
+          decToHex: function(number) {
+              return number < 0 ? 0xFFFFFFFF + number + 1 : parseInt(number, 10).toString(16);
+          },
+
+          hexToRgb: function(hex) {
+              hex = this.hexValueSanitize(hex);
+              return hex.length == 3 ? [this.hexToDec(hex[0] + hex[0]), this.hexToDec(hex[1] + hex[1]), this.hexToDec(hex[2] + hex[2])] : [this.hexToDec(hex[0] + hex[1]), this.hexToDec(hex[2] + hex[3]), this.hexToDec(hex[4] + hex[5])];
+          },
+
+          hexBrightness: function(hex, type) {
+              let conversion;
+
+              if (type == 'BT601') {
+                  conversion = [0.299, 0.587, 0.114]; //BT601
+              } else if (type == 'BT709') {
+                  conversion = [0.2126, 0.7152, 0.0722]; //BT709
+              } else if (type == 'BT2020') {
+                  conversion = [0.2627, 0.6780, 0.0593]; //BT2020
+              } else {
+                  conversion = [0.299, 0.587, 0.114]; //BT601
+              };
+
+              hex = this.hexValueSanitize(hex);
+
+              return (this.hexToDec(hex[0] + hex[1]) * conversion[0] + this.hexToDec(hex[2] + hex[3]) * conversion[1] + this.hexToDec(hex[4] + hex[5]) * conversion[2]);
+          },
+
+          rgbToHsv: function(color) {
+              let r = color[0] / 255;
+              let g = color[1] / 255;
+              let b = color[2] / 255;
+
+              let h,s,min,max,del,dR,dG,dB,hsl;
+
+              hsl = [];
+
+              min = Math.min(r, g, b);
+              max = Math.max(r, g, b);
+              del = max - min;
+
+              if ( del == 0 ) {
+                  h = 0;
+                  s = 0;
+              } else {
+                  s = del / max;
+
+                  dR = ( ( ( max - r ) / 6 ) + ( del / 2 ) ) / del;
+                  dG = ( ( ( max - g ) / 6 ) + ( del / 2 ) ) / del;
+                  dB = ( ( ( max - b ) / 6 ) + ( del / 2 ) ) / del;
+
+                  if ( r == max ) {
+                      h = dB - dG;
+                  } else if ( g == max ) {
+                      h = ( 1 / 3 ) + dR - dB;
+                  } else if ( b == max ) {
+                      h = ( 2 / 3 ) + dG - dR;
+                  };
+
+                  if ( h < 0 ) {
+                      h++;
+                  };
+
+                  if ( h > 1 ) {
+                      h--;
+                  };
+              };
+
+              hsl['h'] = h;
+              hsl['s'] = s;
+              hsl['v'] = 0.9;
+
+              return hsl;
+          },
+
+          hexToHsv: function( hex ) {
+              let rgb, hsv;
+
+              hex = this.hexValueSanitize( hex );
+
+              rgb = this.hexToRgb( hex );
+              hsv = this.rgbToHsv( rgb );
+
+              return hsv;
+          },
+
+          mostBrightColor: function( colors, type ) {
+              let mostBright = false;
+              let hex;
+
+              colors.forEach( color => {
+                  hex = this.hexValueSanitize( color );
+
+                  brightness = this.hexBrightness( hex, type );
+                  if ( ! mostBright || this.hexBrightness( hex, type ) > this.hexBrightness( mostBright, type ) ) {
+                      mostBright = hex;
+                  };
+              });
+
+              return `${mostBright}`;
+          },
+
+          sortColors: function( colors ) {
+              const input = colors.slice(0);
+              const output = [];
+              
+              while (input.length > 0) {
+                var color = this.mostBrightColor( input );
+                let index = input.indexOf( color );
+                if ( index > -1 ) {
+                  input.splice( index, 1 );
+                }
+                output.push( color )
+              }
+              return output
+          },
+
+          cssVar: function( name, value ) {
+              if ( name[0] != '-' ) name = '--' + name //allow passing with or without --
+              if ( value ) document.documentElement.style.setProperty( name, value );
+              return getComputedStyle( document.documentElement ).getPropertyValue( name );
+          },
+
+          updateColors( colors ) {
+            let firstColor = this.hexToTableValue( colors[0] );
+            let lastColor = this.hexToTableValue( colors[ colors.length - 1 ] );
+            
+            document.querySelector( '#msduotone feFuncR' ).setAttribute( 'tableValues', lastColor[0] + " " + firstColor[0] );
+            document.querySelector( '#msduotone feFuncG' ).setAttribute( 'tableValues', lastColor[1] + " " + firstColor[1] );
+            document.querySelector( '#msduotone feFuncB' ).setAttribute( 'tableValues', lastColor[2] + " " + firstColor[2] );
+
+            colors.forEach( ( color, index ) => {
+              this.cssVar( 'color-' + ( index + 1 ), '#' + color );
+            } );
+          },
+          
+          hexToTableValue: function( h ) {
+            h = this.cutHex( h );
+            return [ parseInt( h.substring( 0,2 ),16 ) / 255, parseInt( h.substring( 2, 4 ), 16 ) / 255,parseInt( h.substring( 4,6 ), 16 ) / 255 ];
+          },
+ 
+          cutHex: function( h ) {
+            return ( h.charAt( 0 ) == "#" ) ? h.substring( 1, 7 ) : h;
+          },
+          imgLoad: function( element, callback ) {
+            var allImgsLength = 0;
+            var allImgsLoaded = 0;
+            var allImgs = [];
+
+            var filtered = Array.prototype.filter.call( element.querySelectorAll( 'img' ), function( item ) {
+                if (item.src === '') {
+                    return false;
+                }
+
+                // Firefox's `complete` property will always be `true` even if the image has not been downloaded.
+                // Doing it this way works in Firefox.
+                var img = new Image();
+                img.src = item.src;
+                return ! img.complete;
+            } );
+
+            filtered.forEach( function( item ) {
+                allImgs.push( {
+                    src: item.src,
+                    element: item
+                } );
+            } );
+
+            allImgsLength = allImgs.length;
+            allImgsLoaded = 0;
+
+            // If no images found, don't bother.
+            if ( allImgsLength === 0 ) {
+                callback.call( element );
+            }
+
+            allImgs.forEach( function( img ) {
+                var image = new Image();
+
+                // Handle the image loading and error with the same callback.
+                image.addEventListener( 'load', function() {
+                    allImgsLoaded++;
+
+                    if ( allImgsLoaded === allImgsLength ) {
+                        callback.call( element );
+                        return false;
+                    }
+                } );
+
+                image.src = img.src;
+            } );
+          },
+          getData: function() {
+            fetchJsonp( 'http://www.colourlovers.com/api/palettes/random', {
+              jsonpCallbackFunction: '_callback',
+              jsonpCallback: 'jsonCallback'
+            } ).then( function( response ) {
+              return response.json()
+            } ).then( function( json ) {
+              let colors = json[0].colors;
+              MVDESIGN.updateColors( colors );
+
+              let pics = document.querySelectorAll( '.profile-pic' );
+              fetch(  'https://randomuser.me/api/?nat=US&results=' + pics.length, { method: 'GET' } )
+                .then( response => response.json() )
+                .then( json => {
+                    let names = document.querySelectorAll( '.profile-info h2' );
+
+                    json.results.forEach( ( person, index ) => {
+                        pics[ index ].src = person.picture.large;
+                        names[ index ].childNodes[0].nodeValue = person.name.first;
+                        names[ index ].querySelector( 'span' ).textContent = MVDESIGN.jobs[ MVDESIGN.jobs.length * Math.random() | 0 ]
+                    } );
+
+                    document.querySelectorAll( '.col' ).forEach( col => {
+                      col.style.visibility = 'visible';
+                    } );
+                } )
+                .catch( error => console.error( 'error:', error ) );
+            } ).catch(function(ex) {
+                console.log('parsing failed', ex)
+            } );
+          },
+          init: function() {
+            this.imgLoad( document.querySelector( '.profile-card' ), this.getData );
+          }
+        };
+        MVDESIGN.init();
+ 
+    </script>
+    <svg xmlns="http://www.w3.org/2000/svg"><filter id="msduotone"><feColorMatrix type="matrix" result="grayscale" values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0" ></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" result="msduotone"><feFuncR type="table" tableValues="0.7411764706 0.9882352941"></feFuncR><feFuncG type="table" tableValues="0.0431372549 0.7333333333"></feFuncG><feFuncB type="table" tableValues="0.568627451 0.05098039216"></feFuncB><feFuncA type="table" tableValues="0 1"></feFuncA></feComponentTransfer></filter></svg>
+</body>
