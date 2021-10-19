@@ -16,22 +16,24 @@
 	var $el = document.querySelector( '.resizable' );
 	var $main = document.getElementById( 'main' );
 	
-	var elHeight = $el.offsetHeight;
-	var elWidth = $el.offsetWidth;
-
-	function adjustWindowSize() {
-		scale = Math.min(
-			parseFloat( getComputedStyle( $main, null ).width.replace( 'px', '' ) ) / elWidth,    
-			parseFloat( getComputedStyle( $main, null ).height.replace( 'px', '' ) )  / elHeight
-		);
-
-		scale = scale > 1 ? 1 : scale;
-
-		$el.style.transform = 'translate(-50%, -50%) scale(' + scale + ')';
+	if ( $el !== null ) {
+		var elHeight = $el.offsetHeight;
+		var elWidth = $el.offsetWidth;
+	
+		function adjustWindowSize() {
+			scale = Math.min(
+				parseFloat( getComputedStyle( $main, null ).width.replace( 'px', '' ) ) / elWidth,    
+				parseFloat( getComputedStyle( $main, null ).height.replace( 'px', '' ) )  / elHeight
+			);
+	
+			scale = scale > 1 ? 1 : scale;
+	
+			$el.style.transform = 'translate(-50%, -50%) scale(' + scale + ')';
+		}
+	
+		adjustWindowSize();
+		window.addEventListener( 'resize', adjustWindowSize );
 	}
-
-	adjustWindowSize();
-	window.addEventListener( 'resize', adjustWindowSize );
 } )();
 (function (global, factory) {
 	if (typeof define === 'function' && define.amd) {
