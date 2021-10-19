@@ -357,12 +357,17 @@ html, body {
 }
 
 /* Main Nav */
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 nav {
 	top: 0;
 	right: 0;
 	z-index: 1;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	font-size: 18px;
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -608,14 +613,14 @@ main {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 	font-size: 1.4rem;
 	font-weight: bold;
-	position: absolute;
-    right: 0;
+  position: fixed;
+  right: 0;
 	top: 2.25rem;
 	text-transform: uppercase;
 	color: #45a4a8;
 	mix-blend-mode: multiply;
 	letter-spacing: -2.5px;
 	z-index: 1;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }

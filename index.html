@@ -13,7 +13,6 @@
 }
 
 body {
-    overflow: hidden;
 	font-family: 'Oswald', sans-serif;
     background-color: var(--background);
     color: #233b48;
@@ -66,7 +65,38 @@ body {
 .m:after {
     margin-left: var(--logo-margin);
 }
-
+main {
+    font-size: 18px;
+}
+section {
+    padding: 0;
+}
+.top {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh
+}
+.top img {
+    border-style: none;
+    border-radius: 100%;
+    width: 353px;
+}
+.top .first {
+    color: #45a4a8;
+}
+.top .first, .top .last {
+    letter-spacing: -8px;
+    font-size: 126px;
+    display: inline-grid;
+}
+.profession {
+    font-size: 31px;
+    margin-top: -30px;
+    text-align: center;
+    color: #d5d5d5ab;
+}
 
 </style>
 </head>
@@ -90,9 +120,18 @@ body {
             <header>
                 <h1 class="title">Portfolio</h1>
             </header>
-            <section class="resizable">
-                <div class="branding">
-                    <div class="m"><div></div></div>
+            <section>
+                <div class="top">
+                    <img src="./img/timelsass.png">
+                    <div class="details">
+                        <div class="name">
+                            <div class="first">tim</div>
+                            <div class="last">elsass</div>
+                        </div>
+                        <div class="profession">
+                            JavaScript & Frontend Developer
+                        </div>
+                    </div>
                 </div>
             </section>
         </article>
