@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-<title>Random Card</title>
+<title>Dynamic Cards</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Description" content="A demonstration of design aided by programming.">
 <link href="./global.css" rel="stylesheet" type="text/css">
@@ -149,29 +149,24 @@ body {
     visibility: hidden;
     max-width: 400px;
 }
+header > button {
+    border-right: none;
+    padding: 24px;
+    background-color: #0d0d0d;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-top: none;
+}
 
 </style>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header>
-        <nav role="navigation">
-            <div class="menu-toggle-wrapper">
-                <div class="menu-toggle"><span>Menu</span></div>
-            </div>
-            <ul class="menu">
-                <li><a href="https://tim.ph"><span>Home</span></a></li>
-                <li><a href="./portfolio"><span>Portfolio</span></a></li>
-                <li><a href="./quote"><span>CSS Quote</span></a></li>
-                <li><a href="./design"><span>Color Cards</span></a></li>
-                <li><a href="https://boldgrid.com/central/cloud-wordpress/try?theme=crio&plugins=post-and-page-builder" target="_blank" rel="noopener noreferrer"><span>Demo Theme</span></a></li>
-            </ul>
-        </nav>
-    </header>
     <main id="main" role="main">
         <article>
             <header>
-                <h1 class="title">Cards</h1>
+                <button onClick="window.location.reload();">Refresh</button>
             </header>
             <section class="resizable">
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
