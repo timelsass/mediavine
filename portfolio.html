@@ -141,6 +141,9 @@ button.is-checked {
 }
 
 /* lightbox overrides (not sure why 100% height in default styles isn't working, but this calc solves fine. */
+.glightbox-clean .gslide-desc {
+    font-size: 16px;
+}
 @media (min-width: 769px) {
     .glightbox-clean .description-left .gdesc-inner, .glightbox-clean .description-right .gdesc-inner {
         position: absolute;
@@ -193,6 +196,21 @@ button.is-checked {
                         </div>
                         <div class="gallery-item-desc gallery-item-custom-desc1">
                             <p>This is a WordPress plugin for the Jasmine JavaScript testing framework.  This plugin allows developers to run their Jasmine unit tests in the WordPress dashboard, so they can get visual confirmation of passing/failing tests without the need to run CLI.  This was predominately developed for use in conjunction with the BoldGrid SEO plugin, which was heavily reliant on JavaScript, and I wanted to provide a way for a normal user as well as a developer to run the unit tests before we publish the code for release to the public which had code coverage of all the functionality of the plugin.</p>
+                        </div>
+                    </div>
+
+                    <!-- GRID ITEM -->
+                    <div class="grid-item design js-dev php-dev opensource">
+                        <div class="grid-title">
+                            BoldGrid Crio
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: #151515;">
+                            <a href="./img/crio-inside.webp" class="gallery-lightbox" data-glightbox="title: BoldGrid Crio; descPosition: left; description: .gallery-item-custom-desc7">
+                                <img src="./img/boldgrid-crio.png" alt="image" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc7">
+                            <p>This was the flagship theme for a company called BoldGrid.  My goal with this theme was to ensure that it had partiy with the top WordPress themes in paid and free marketplaces.  Aside from this the theme is ran based on configuration options, and can be fully customized to generate new themes by simply changing a couple of settings in a config file.  Things like color palettes can be automatically generated and applied, font-sizes, header and footer layouts, blog designs, and much more.  The majority of time invested in this project went into creating options in the WordPress customizer using the customizer's JavsScript API.  Many custom controls were created to give end users fine grain control over all of their website design choices.</p>
                         </div>
                     </div>
 
@@ -259,7 +277,7 @@ button.is-checked {
                     <!-- GRID ITEM -->
                     <div class="grid-item design">
                         <div class="grid-title">
-                            Sundog Music and Audio
+                            Off The Grid Campgrounds
                         </div>
                         <div class="grid-lightbox-container" style="background-color: white;">
                             <a href="./img/off-the-grid-campgrounds.png" class="gallery-lightbox" data-glightbox="title: Off The Grid Campgrounds Logo and T-Shirt Design; descPosition: right; description: .gallery-item-custom-desc6">
@@ -272,26 +290,20 @@ button.is-checked {
                     </div>
 
                     <!-- GRID ITEM -->
-                    <div class="grid-item design">
+                    <div class="grid-item php-dev js-dev opensource">
                         <div class="grid-title">
-                            Sundog Music and Audio
+                            BoldGrid SEO
                         </div>
                         <div class="grid-lightbox-container" style="background-color: white;">
-                            <a href="./img/sundog-music-and-audio.png" class="gallery-lightbox" data-glightbox="title: Sundog Music and Audio Branding; description: .gallery-item-custom-desc5">
-                                <img src="./img/sundog-music-and-audio.png" alt="image" />
+                            <a href="./img/boldgrid-seo-screenshot.png" class="gallery-lightbox" data-glightbox="title: BoldGrid SEO; descPosition: left; description: .gallery-item-custom-desc7">
+                                <img src="./img/boldgrid-seo.png" alt="image" />
                             </a>
                         </div>
-                        <div class="gallery-item-desc gallery-item-custom-desc5">
-                            <p>This was a logo designed for Sundog Music and Audio in Yorktown, Virginia.  The image was created primarily for their facebook page initially, but became a part of their branding after receiving it.</p>
+                        <div class="gallery-item-desc gallery-item-custom-desc7">
+                            <p>This plugin was developed for a company called BoldGrid.  The primary focus of this plugin was to provide a feature packed SEO plugin that had a lightweight and easy to use interface that still gave clients all the right tools to ensure they are writing great content for climbing up the SERPs.  This plugin was mostly designed using JavaScript and some light PHP usage, and provide realtime insights and feedback on the content being written.  The plugin itself was also written to be fully covered by unit testing, which helped when identifying bugs, and when fixing or creating new features for it.</p>
                         </div>
                     </div>
 
-                    <div class="grid-item php-dev opensource">
-                        <div class="grid-title">
-                            Customizer Social Icons
-                        </div>
-                        <img src="./img/jasmine-test-runner.png"/>
-                    </div>
                     <div class="grid-item php-dev opensource">
                         <div class="grid-title">
                             WP PHP Version Check
