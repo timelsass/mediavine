@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<title>Tim Elsass - Design and Development Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" content="A collection of works by Tim Elsass in the digital design and development fields.">
+<link href="./global.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./scripts/glightbox.min.css" />
+<script src="./scripts/glightbox.min.js"></script>
+<style>
+:root {
+	--background: rgba(255,255,255,1);
+	--color: #45a4a8;
+	--logo-margin: 1.813em;
+}
+
+body {
+	font-family: 'Oswald', sans-serif;
+    background-color: var(--background);
+    color: #233b48;
+}
+
+.resizable {
+    font-size: 16px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width:766px;
+    height: 501px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.branding {
+    display: flex;
+}
+
+/* leaf */
+.branding:after {
+    content: "";
+    width: 107px;
+    height: 100px;
+    border: 33px solid var(--color);
+    border-radius: 115px 0px;
+    transform: rotate(-20deg);
+    margin-left: calc(var(--logo-margin) + .5em);
+    margin-top: calc(var(--logo-margin) - .25em);
+    box-shadow: 0px 0x 0px 3px var(--color);
+}
+
+.m:before,
+.m > div,
+.m:after {
+    display: inline-block;
+    height: 501px;
+    width: 166px;
+    background-color: var(--color);
+    border-top-right-radius: 166px;
+    border-bottom-left-radius: 166px;
+    content: "";
+}
+.m:before {
+    margin-right: var(--logo-margin);
+}
+.m:after {
+    margin-left: var(--logo-margin);
+}
+main {
+    font-size: 18px;
+}
+section {
+    padding: 0;
+}
+.filters {
+	width: 100%;
+	text-align: center;
+}
+
+.filters-button-group {
+	list-style: none;
+	padding: 20px 0;
+}
+
+button {
+	display: inline;
+	padding: 10px 25px;
+	font-size: 14px;
+	color: #636363;
+	font-weight: 400;
+	cursor: pointer;
+  	text-transform: uppercase;
+  	letter-spacing: .2em;
+}
+
+button:hover {
+	color: #a6a6a6;
+}
+
+button.is-checked {
+	color: #ccc;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+}
+
+
+/* portfolio grid items */
+.grid-item {
+    width: 25%;
+    max-width: 300px;
+    min-width: 300px;
+    overflow: hidden;
+    margin: 1em;
+    max-height: 300px;
+    min-height: 300px;
+}
+
+.grid-title {
+    background: #3b3b3b;
+    padding: 1em;
+    margin-left: -1em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    opacity: .9;
+}
+
+.gallery-lightbox {
+    height: 300px;
+}
+.grid-lightbox-container {
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
+.grid-lightbox-container img {
+    width: 300px;
+}
+
+/* lightbox overrides (not sure why 100% height in default styles isn't working, but this calc solves fine. */
+@media (min-width: 769px) {
+    .glightbox-clean .description-left .gdesc-inner, .glightbox-clean .description-right .gdesc-inner {
+        position: absolute;
+        height: calc(100% - 44px);
+        overflow-y: auto;
+    }
+}
+</style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+        <nav role="navigation">
+            <div class="menu-toggle-wrapper">
+                <div class="menu-toggle"><span>Menu</span></div>
+            </div>
+            <ul class="menu">
+                <li><a href="./index"><span>Home</span></a></li>
+                <li><a href="./logo"><span>CSS Logo</span></a></li>
+                <li><a href="./quote"><span>CSS Quote</span></a></li>
+                <li><a href="./design"><span>Color Cards</span></a></li>
+                <li><a href="https://boldgrid.com/central/cloud-wordpress/try?theme=crio&plugins=post-and-page-builder" target="_blank" rel="noopener noreferrer"><span>Demo Theme</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" role="main">
+        <article>
+            <header>
+                <h1 class="title">Portfolio</h1>
+            </header>
+            <section>
+                <div class="button-group filters filters-button-group">
+                    <button class="button is-checked" data-filter="*">All</button>
+                    <button class="button" data-filter=".js-dev">JavaScript</button>
+                    <button class="button" data-filter=".php-dev">PHP</button>
+                    <button class="button" data-filter=".design">Design</button>
+                    <button class="button" data-filter=".opensource">Open Source Projects</button>
+                </div>
+                <div class="grid">
+
+                    <!-- GRID ITEM -->
+                    <div class="grid-item js-dev opensource">
+                        <div class="grid-title">
+                            Jasmine Test Runner
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: #8a4182;">
+                            <a href="./img/jasmine-test-runner.png" class="gallery-lightbox" data-glightbox="title: Jasmine Test Runner for WordPress; description: .gallery-item-custom-desc1">
+                                <img src="./img/jasmine-logo.png" alt="image" style="margin: -200px 0;" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc1">
+                            <p>This is a WordPress plugin for the Jasmine JavaScript testing framework.  This plugin allows developers to run their Jasmine unit tests in the WordPress dashboard, so they can get visual confirmation of passing/failing tests without the need to run CLI.  This was predominately developed for use in conjunction with the BoldGrid SEO plugin, which was heavily reliant on JavaScript, and I wanted to provide a way for a normal user as well as a developer to run the unit tests before we publish the code for release to the public which had code coverage of all the functionality of the plugin.</p>
+                        </div>
+                    </div>
+
+                    <!-- GRID ITEM -->
+                    <div class="grid-item design">
+                        <div class="grid-title">
+                            Mediavine Pure CSS Logo
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: white;">
+                            <a href="./img/jasmine-test-runner.png" class="gallery-lightbox" data-glightbox="title: Mediavine Pure CSS Logo; description: .gallery-item-custom-desc2">
+                                <img src="./img/mediavine-logo.jpg" alt="image" style="margin: -200px 0;" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc2">
+                            <p>Sometimes I like to challenge myself in designing different aspects of a project, and one area I like to experiment with is with logo implementations.  As part of a optimization of a site, it's important to reduce as many external resources as possible, and also optimize any assets you have displayed.  By rendering a logo in pure CSS format, you can often times save a few bytes throughout pageloads which can really add up.  This is an example of a logo for the company "Mediavine", which focuses on full service ad management software for WordPress.</p>
+                        </div>
+                    </div>
+
+                    <!-- GRID ITEM -->
+                    <div class="grid-item php-dev js-dev opensource">
+                        <div class="grid-title">
+                            Customizer Social Icons
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: white;">
+                            <a href="./img/customizer-social-icons.png" class="gallery-lightbox" data-glightbox="title: Customizer Social Icons; descPosition: right; description: .gallery-item-custom-desc3">
+                                <img src="./img/customizer-social-icons.png" alt="image" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc3">
+                            <p>Sometimes I like to challenge myself in designing different aspects of a project, and one area I like to experiment with is with logo implementations.  As part of a optimization of a site, it's important to reduce as many external resources as possible, and also optimize any assets you have displayed.  By rendering a logo in pure CSS format, you can often times save a few bytes throughout pageloads which can really add up.  This is an example of a logo for the company "Mediavine", which focuses on full service ad management software for WordPress.</p>
+                        </div>
+                    </div>
+
+                    <!-- GRID ITEM -->
+                    <div class="grid-item design">
+                        <div class="grid-title">
+                            Ride It Out by Knapp Consultants
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: white;">
+                            <a href="./img/ride-it-out-book-cover.png" class="gallery-lightbox" data-glightbox="title: Ride It Out by Knapp Consultants; descPosition: left; description: .gallery-item-custom-desc4">
+                                <img src="./img/ride-it-out-book-cover.png" alt="image" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc4">
+                            <p>This design was created for a publishing and employee training company called Knapp Consultants.  They approached me to design a few book cover designs for their materials.  This is one of them entitled, “When the Going Gets Tough.. Ride It Out!”  They wanted something colorful, and meaningful to add as a preview on their website.  Knapp Consultants was trying to have something that was kind of silly, but still relevant for the topic of the book.</p>
+                        </div>
+                    </div>
+
+                    <!-- GRID ITEM -->
+                    <div class="grid-item design">
+                        <div class="grid-title">
+                            Sundog Music and Audio
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: #e96a0b;">
+                            <a href="./img/sundog-music-and-audio.jpg" class="gallery-lightbox" data-glightbox="title: Sundog Music and Audio Branding; description: .gallery-item-custom-desc5">
+                                <img src="./img/sundog-music-and-audio.jpg" alt="image" style="margin: -166px 0;" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc5">
+                            <p>This was a logo designed for Sundog Music and Audio in Yorktown, Virginia.  The image was created primarily for their facebook page initially, but became a part of their branding after receiving it.</p>
+                        </div>
+                    </div>
+
+                    <!-- GRID ITEM -->
+                    <div class="grid-item design">
+                        <div class="grid-title">
+                            Sundog Music and Audio
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: white;">
+                            <a href="./img/off-the-grid-campgrounds.png" class="gallery-lightbox" data-glightbox="title: Off The Grid Campgrounds Logo and T-Shirt Design; descPosition: right; description: .gallery-item-custom-desc6">
+                                <img src="./img/off-the-grid-campgrounds.png" alt="image" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc6">
+                            <p>This logo was designed for a campsite called Off The Grid Campgrounds in West Virginia.  The goal was to capture all they had to offer, and have a natural earthy feel to it.  The logo encompasses their main focus, which is renewable energy sources, and camping in nature.  The logo was used to print onto t-shirts for the campground employees and to sell in the gift shop.</p>
+                        </div>
+                    </div>
+
+                    <!-- GRID ITEM -->
+                    <div class="grid-item design">
+                        <div class="grid-title">
+                            Sundog Music and Audio
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: white;">
+                            <a href="./img/sundog-music-and-audio.png" class="gallery-lightbox" data-glightbox="title: Sundog Music and Audio Branding; description: .gallery-item-custom-desc5">
+                                <img src="./img/sundog-music-and-audio.png" alt="image" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc5">
+                            <p>This was a logo designed for Sundog Music and Audio in Yorktown, Virginia.  The image was created primarily for their facebook page initially, but became a part of their branding after receiving it.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-item php-dev opensource">
+                        <div class="grid-title">
+                            Customizer Social Icons
+                        </div>
+                        <img src="./img/jasmine-test-runner.png"/>
+                    </div>
+                    <div class="grid-item php-dev opensource">
+                        <div class="grid-title">
+                            WP PHP Version Check
+                        </div>
+                        <img src="./img/jasmine-test-runner.png"/>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+    <script src="./scripts/isotope.pkgd.min.js"></script>
+    <script src="./scripts/imagesloaded.pkgd.min.js"></script>
+    <script src="./global.js"></script>
+    <script>
+        // external js: isotope.pkgd.js
+
+        // init Isotope
+        var iso = new Isotope( '.grid', {
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+        });
+
+        // bind filter button click
+        var filtersElem = document.querySelector('.filters-button-group');
+
+        filtersElem.addEventListener( 'click', function( event ) {
+
+            // only work with buttons
+            if ( !matchesSelector( event.target, 'button' ) ) {
+                return;
+            }
+            var filterValue = event.target.getAttribute('data-filter');
+
+            // use matching filter function
+            iso.arrange({ filter: filterValue });
+        });
+
+        // change is-checked class on buttons
+        var buttonGroups = document.querySelectorAll('.button-group');
+        for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+            var buttonGroup = buttonGroups[ i ];
+            radioButtonGroup( buttonGroup );
+        }
+
+        function radioButtonGroup( buttonGroup ) {
+            buttonGroup.addEventListener( 'click', function( event ) {
+
+                // only work with buttons
+                if ( !matchesSelector( event.target, 'button' ) ) {
+                    return;
+                }
+
+                buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+                event.target.classList.add('is-checked');
+            });
+        }
+
+        // Initiate lightbox selection.
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true,
+            selector: '.gallery-lightbox'
+        });
+
+    </script>
+</body>
