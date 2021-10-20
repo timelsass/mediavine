@@ -118,7 +118,6 @@ section {
     margin: 1em;
     max-height: 300px;
     min-height: 300px;
-    transition: 0.3s;
     border-radius: 30px;
     box-shadow: 1px 1px 5px 1px #cccccc;
     border: 1px solid #cccccc;
@@ -126,6 +125,7 @@ section {
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 1px 7px 5px 1px #cccccc;
+    transition: 0.3s;
 }
 
 .grid-title {
@@ -473,7 +473,9 @@ section {
             touchNavigation: true,
             loop: true,
             autoplayVideos: true,
-            selector: '.gallery-lightbox'
+            selector: '.gallery-lightbox',
+            openEffect: 'zoom',
+            closeEffect: 'fade',
         });
 
     </script>
