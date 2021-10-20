@@ -163,9 +163,12 @@ section {
         overflow-y: auto;
     }
 }
+.portfolio .glightbox-container .ginner-container.desc-left, .portfolio .glightbox-container .ginner-container.desc-right {
+    max-width: 75vw!important;
+}
 </style>
 </head>
-<body>
+<body class="portfolio">
     <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <nav role="navigation">
@@ -195,6 +198,20 @@ section {
                     <button class="button" data-filter=".opensource">Open Source Projects</button>
                 </div>
                 <div class="grid">
+                    <!-- GRID ITEM -->
+                    <div class="grid-item design js-dev">
+                        <div class="grid-title">
+                            Animated Block Quote Design
+                        </div>
+                        <div class="grid-lightbox-container" style="background-color: #2b2b2b;">
+                            <a href="./quote.html" class="gallery-lightbox" data-glightbox="title: Animated Block Quote Design; descPosition: right; description: .gallery-item-custom-desc19; ">
+                                <img src="./img/quote-image.png" alt="image" style="margin: -22px 0;" />
+                            </a>
+                        </div>
+                        <div class="gallery-item-desc gallery-item-custom-desc19">
+                            <p>As part of showing design skill I was provided with a static image, and asked to code it with HTML, CSS, and JavaScript.  The image can be seen in the portfolio, and this is the final product.  I created a bokeh effect with slight movement using JavaScript, and a star field generated using boxshadows in CSS.  The quote doesn't include any additional elements(other than the dynamically created ones via JS), and is styled by simply adding a single class to the standard blockquote structure.</p>
+                        </div>
+                    </div>
 
                     <!-- GRID ITEM -->
                     <div class="grid-item js-dev opensource">
@@ -469,6 +486,8 @@ section {
                             <p>The branding for the Apollo Taxi service in Newport News, Virginia was used on business cards, signs, and most importantly as vinyl decals to identify their fleet of vehicles.</p>
                         </div>
                     </div>
+
+
                     <div class="grid-item php-dev opensource">
                         <div class="grid-title">
                             WP PHP Version Check
@@ -535,6 +554,8 @@ section {
             selector: '.gallery-lightbox',
             openEffect: 'zoom',
             closeEffect: 'fade',
+            height: '100vh', 
+            width: '75vw',
         });
 
     </script>

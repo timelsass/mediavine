@@ -1,6 +1,6 @@
 ( function() {
 	var menu = document.querySelector( '.menu' ),
-			toggle = document.querySelector( '.menu-toggle-wrapper' );
+		toggle = document.querySelector( '.menu-toggle-wrapper' );
 
 	function toggleToggle() {
 		toggle.querySelector( '.menu-toggle' ).classList.toggle( 'menu-open' );
@@ -9,9 +9,11 @@
 	function toggleMenu() {
 		menu.classList.toggle( 'active' );
 	};
-
-	toggle.addEventListener( 'click', toggleToggle, false );
-	toggle.addEventListener( 'click', toggleMenu, false );
+	
+	if ( menu !== null ) {
+		toggle.addEventListener( 'click', toggleToggle, false );
+		toggle.addEventListener( 'click', toggleMenu, false );
+	}
 
 	var $el = document.querySelector( '.resizable' );
 	var $main = document.getElementById( 'main' );
