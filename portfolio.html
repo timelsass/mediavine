@@ -18,6 +18,7 @@ body {
 	font-family: 'Oswald', sans-serif;
     background-color: var(--background);
     color: #233b48;
+    overflow-y: scroll;
 }
 
 .resizable {
@@ -93,6 +94,8 @@ section {
   	text-transform: uppercase;
     letter-spacing: .2em;
     border-radius: 15px;
+    background-color: transparent;
+    transition: all 0.3s;
 }
 
 .button:hover {
@@ -100,11 +103,11 @@ section {
 }
 
 .button.is-checked {
-	color: #ccc;
+    color: #ccc;
+    background-color: #373737;
 	border: 1px solid #ccc;
-	border-radius: 15px;
+    border-radius: 15px;
 }
-
 
 /* portfolio grid items */
 .grid-item {
